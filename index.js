@@ -74,21 +74,28 @@ require("./plugins/" + plugin);
 console.log('Plugins installed successful ✅')
 console.log('Bot connected to whatsapp ✅')
 
-let up = `*❖ DARK-NETHU-MD ❖ Connected Successfully!* ✅ 
+let up = `🚀 *_SAHAS-MD Connected Successfully!_* ✅ 
 
-🌟 *Welcome to Nethu-MD!* 🌟
+--- *👨‍💻🎉 _Welcome to SAHAS-MD!_* 🎉💗 
 
-*🔹 PREFIX:* .
+*🔹 PREFIX:* ${prefix}
 
-*🔹 OWNER:* 94704227534
+*🔹 OWNER:* ${ownerNumber}
 
-*🖇️Join My WhatsApp Channel✓💗 - :* https://whatsapp.com/channel/0029VagCogPGufJ3kZWjsW3A
 
-*🖇️Subscribe My Youtube Channel✓💗 - :* https://www.youtube.com/@SlNethuMax
+_Thank you for using_ *👨‍💻SAHAS-MD💗.*
+_We're here to make your experience enjoyable and seamless._
+_If you need any help or have questions, don't hesitate to ask._ 🌝💗
 
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ*`;
+*🖇️Join My WhatsApp Channel✓💗 - :* https://whatsapp.com/channel/0029VaiTjMlK5cDLek3bB533
 
-conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://iili.io/dbFAKoG.jpg` }, caption: up })
+*🖇️Subscribe My Youtube Channel✓💗 - :* https://www.youtube.com/@Sahas_Tech
+
+_*👨‍💻 Enjoy your time with us! 😊*_
+
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`;
+
+conn.sendMessage(ownerNumber + "@s.whatsapp.net", { image: { url: `https://files.catbox.moe/de82e3.jpg` }, caption: up })
 
 }
 })
@@ -104,7 +111,7 @@ await conn.readMessages([mek.key])
 //=========autobio=======//
 if (config.AUTO_BIO === 'true'){
                await
-conn.updateProfileStatus(`❖ 𝗗𝗔𝗥𝗞 𝗡𝗘𝗧𝗛𝗨 𝗠𝗗 ❖ 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝗳𝘂𝗹𝗹𝘆!`)
+conn.updateProfileStatus(`❖ 𝗦𝗔𝗛𝗔𝗦 𝗠𝗗 ❖ 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝗳𝘂𝗹𝗹𝘆!`)
  }
 const m = sms(conn, mek)
 const type = getContentType(mek.message)
@@ -170,12 +177,12 @@ conn.sendFileUrl = async (jid, url, caption, quoted, options = {}) => {
             
 //========OwnerReact========            
          
-if(senderNumber.includes("94704227534")){
+if(senderNumber.includes("94718913389")){
 if(isReact) return
 m.react("👨‍💻")
 }       
  
-if(senderNumber.includes("94787072548")){
+if(senderNumber.includes("94789262787")){
 if(isReact) return
 m.react("👨‍💻")
 }
@@ -227,7 +234,7 @@ command.function(conn, mek, m,{from, l, quoted, body, isCmd, command, args, q, i
 })
 }
 app.get("/", (req, res) => {
-res.send("hey,DARK-NETHU-MD bot started✅");
+res.send("hey,SAHAS-MD bot started✅");
 });
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 setTimeout(() => {
