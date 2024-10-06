@@ -148,7 +148,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 //======================= fb downloader ===================================================================
 
-const { fetchJson } = require('../lib/functions')
+const { fetchJson } = require('../lib/database')
 const config = require('../config')
 
 // FETCH API URL
