@@ -7,7 +7,7 @@ const fg = require('api-dylux');
 cmd({
     pattern: 'song',
     desc: 'download songs',
-    react: "🎧",
+    react: "🎶",
     category: 'download',
     filename: __filename
 },
@@ -19,26 +19,24 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const data = search.videos[0];
         const url = data.url;
 
-        let desc = `*❖ DARK NETHU MD SONG DOWNLOADER ❖*
+        let desc = `*🎼 SAHAS-MD SONG DOWNLOADER . .⚙️*
 
-➥ TITLE - ${data.title}
+🎼⚙️ TITLE - ${data.title}
 
-➥ VIEWS - ${data.views}
+🎼⚙️ VIEWS - ${data.views}
 
-➥ DESCRIPTION - ${data.description}
+🎼⚙️ DESCRIPTION - ${data.description}
 
-➥ TIME - ${data.timestamp}
+🎼⚙️ TIME - ${data.timestamp}
 
-➥ AGO - ${data.ago}
+🎼⚙️ AGO - ${data.ago}
 
-💻 Github:https://github.com/project-wabot/DARK-NETHU-MD
+*Reply This Message With Option*
 
-*Choose Your Download Format*
+*1 Audio With Normal Format*
+*2 Audio With Document Format*
 
-*1 Audio File🎶*
-*2 Document File📁*
-
-> ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`;
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`;
 
         const vv = await conn.sendMessage(from, { image: { url: data.thumbnail }, caption: desc }, { quoted: mek });
 
@@ -53,13 +51,13 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     case '1':
                         let down = await fg.yta(url);
                         let downloadUrl = down.dl_url;
-                        await conn.sendMessage(from, { audio: { url:downloadUrl }, caption: '*ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ*', mimetype: 'audio/mpeg'},{ quoted: mek });
+                        await conn.sendMessage(from, { audio: { url:downloadUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*', mimetype: 'audio/mpeg'},{ quoted: mek });
                         break;
                     case '2':               
                         // Send Document File
                         let downdoc = await fg.yta(url);
                         let downloaddocUrl = downdoc.dl_url;
-                        await conn.sendMessage(from, { document: { url:downloaddocUrl }, caption: '*ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ*', mimetype: 'audio/mpeg', fileName:data.title + ".mp3"}, { quoted: mek });
+                        await conn.sendMessage(from, { document: { url:downloaddocUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*', mimetype: 'audio/mpeg', fileName:data.title + ".mp3"}, { quoted: mek });
                         await conn.sendMessage(from, { react: { text: '✅', key: mek.key } })
                         break;
                     default:
@@ -76,12 +74,13 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     }
 });
 
+
 //==================== Video downloader =========================
 
 cmd({
     pattern: 'video',
     desc: 'download videos',
-    react: "🎬",
+    react: "📽️",
     category: 'download',
     filename: __filename
 },
@@ -93,26 +92,24 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const data = search.videos[0];
         const url = data.url;
 
-        let desc = `*❖ DARK NETHU MD VIDEO DOWNLOADER ❖*
+        let desc = `*📽️ SAHAS-MD VIDEO DOWNLOADER . .⚙️*
 
-➥ TITLE - ${data.title}
+📽️⚙️ TITLE - ${data.title}
 
-➥ VIEWS - ${data.views}
+📽️⚙️ VIEWS - ${data.views}
 
-➥ DESCRIPTION - ${data.description}
+📽️⚙️ DESCRIPTION - ${data.description}
 
-➥ TIME - ${data.timestamp}
+📽️⚙️ TIME - ${data.timestamp}
 
-➥ AGO - ${data.ago}
+📽️⚙️ AGO - ${data.ago}
 
-💻 Github:https://github.com/project-wabot/DARK-NETHU-MD
+*Reply This Message With Option*
 
-*🌟 Choose Your Download Format*
+*1 Video With Normal Format*
+*2 Video With Document Format*
 
-*1 Video File🎶*
-*2 Document File📁*
-
-> ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`;
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`;
 
         const vv = await conn.sendMessage(from, { image: { url: data.thumbnail }, caption: desc }, { quoted: mek });
 
@@ -127,12 +124,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     case '1':
                         let downvid = await fg.ytv(url);
                         let downloadvUrl = downvid.dl_url;
-                        await conn.sendMessage(from, { video : { url:downloadvUrl }, caption: '*ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ*', mimetype: 'video/mp4'},{ quoted: mek });
+                        await conn.sendMessage(from, { video : { url:downloadvUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*', mimetype: 'video/mp4'},{ quoted: mek });
                         break;
                     case '2':
                         let downviddoc = await fg.ytv(url);
                         let downloadvdocUrl = downviddoc.dl_url;
-                        await conn.sendMessage(from, { document: { url:downloadvdocUrl }, caption: '*ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ*', mimetype: 'video/mp4', fileName:data.title + ".mp4" }, { quoted: mek });
+                        await conn.sendMessage(from, { document: { url:downloadvdocUrl }, caption: '> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*', mimetype: 'video/mp4', fileName:data.title + ".mp4" }, { quoted: mek });
                         break;
                     default:
                         reply("Invalid option. Please select a valid option🔴");
@@ -148,13 +145,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     }
 });
 
+
 //======================= fb downloader ===================================================================
 
 const { fetchJson } = require('../lib/functions')
 const config = require('../config')
+const { cmd, commands } = require('../command')
 
 // FETCH API URL
-let baseUrl;
+let baseUrl
 (async () => {
     let baseUrlGet = await fetchJson(`https://raw.githubusercontent.com/prabathLK/PUBLIC-URL-HOST-DB/main/public/url.json`)
     baseUrl = baseUrlGet.api
@@ -164,26 +163,24 @@ cmd({
     pattern: "fb",
     desc: "Download fb videos",
     category: "download",
-    react: "📥",
+    react: "🔎",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         if (!q || !q.startsWith("https://")) return reply("Please provide a valid Facebook video URL!");
         const data = await fetchJson(`${baseUrl}/api/fdown?url=${q}`);
-        let desc = ` *❖ DARK-NETHU-MD FB DOWNLOADER ❖*
+        let desc = ` *SAHAS-MD FB DOWNLOADER...⚙️*
 
-💻  Github:https://github.com/project-wabot/DARK-NETHU-MD
+*Reply This Message With Option*
 
-*🌟 Choose Your Download Quality*
+*1 Download FB Video In HD*
+*2 Download FB Video In SD*
 
-*1 Download HD Quality*
-*2 Download SD Quality*
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`;
 
-> ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`;
+        const vv = await conn.sendMessage(from, { image: { url: "https://files.catbox.moe/de82e3.jpg"}, caption: desc }, { quoted: mek });
 
-        const vv = await conn.sendMessage(from, { image: { url:"https://iili.io/dbFAKoG.jpg"}, caption: desc }, { quoted: mek });
-        
         conn.ev.on('messages.upsert', async (msgUpdate) => {
             const msg = msgUpdate.messages[0];
             if (!msg.message || !msg.message.extendedTextMessage) return;
@@ -193,10 +190,10 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
                 switch (selectedOption) {
                     case '1':
-                        await conn.sendMessage(from, { video: { url: data.data.hd }, mimetype: "video/mp4", caption: "*ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ*" }, { quoted: mek });
+                        await conn.sendMessage(from, { video: { url: data.data.hd }, mimetype: "video/mp4", caption: "> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*" }, { quoted: mek });
                         break;
                     case '2':               
-                    await conn.sendMessage(from, { video: { url: data.data.sd }, mimetype: "video/mp4", caption: "*ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ*" }, { quoted: mek });
+                    await conn.sendMessage(from, { video: { url: data.data.sd }, mimetype: "video/mp4", caption: "> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*" }, { quoted: mek });
                         break;
                     default:
                         reply("Invalid option. Please select a valid option🔴");
@@ -211,3 +208,61 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         reply('An error occurred while processing your request.');
     }
 });
+
+//======================= tiktok downloader ===================================================================
+cmd({
+    pattern: "tiktok",
+    alias: ["tt"],
+    desc: "Download tt videos",
+    category: "download",
+    react: "🔎",
+    filename: __filename
+},
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+        if (!q || !q.startsWith("https://")) return reply("Please provide a valid Tiktok video URL!");
+        const data = await fetchJson(`${baseUrl}/api/tiktokdl?url=${q}`);
+        let desc = ` *SAHAS-MD TikTok DOWNLOADER...⚙️*
+
+*Reply This Message With Option*
+
+*1 Download TikTok Video With Watermark*
+*2 Download TikTok Video Without Watermark*
+*3 Download Audio*
+
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`;
+
+        const vv = await conn.sendMessage(from, { image: { url: "https://files.catbox.moe/de82e3.jpg" }, caption: desc }, { quoted: mek });
+
+        conn.ev.on('messages.upsert', async (msgUpdate) => {
+            const msg = msgUpdate.messages[0];
+            if (!msg.message || !msg.message.extendedTextMessage) return;
+
+            const selectedOption = msg.message.extendedTextMessage.text.trim();
+
+            if (msg.message.extendedTextMessage.contextInfo && msg.message.extendedTextMessage.contextInfo.stanzaId === vv.key.id) {
+                switch (selectedOption) {
+                    case '1':
+                        await conn.sendMessage(from, { video: { url: data.data.wm }, mimetype: "video/mp4", caption: "> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*" }, { quoted: mek })  
+                        break;
+                    case '2':               
+                    await conn.sendMessage(from, { video: { url: data.data.no_wm }, mimetype: "video/mp4", caption: "> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*" }, { quoted: mek })
+                        break;
+                    case '3':               
+                    await conn.sendMessage(from, { audio: { url: data.data.audio }, mimetype: "audio/mpeg" }, { quoted: mek })
+                        break;
+                    default:
+                        reply("Invalid option. Please select a valid option🔴");
+                }
+
+            }
+        });
+
+    } catch (e) {
+        console.error(e);
+        await conn.sendMessage(from, { react: { text: '❌', key: mek.key } })
+        reply('An error occurred while processing your request.');
+    }
+});
+
+
