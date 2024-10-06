@@ -174,7 +174,7 @@ try{
 const news = await fetchJson(`${apilink}/hiru`)
   
 const msg = `
-           ❖ *DARK NETHU MD HIRU NEWS* ❖
+           ❖ *SAHAS MD HIRU NEWS* ❖
 
        
 • *Title* - ${news.result.title}
@@ -183,7 +183,7 @@ const msg = `
 
 • *Link* - ${news.result.url}
 
-> ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`
 
 
 await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
@@ -210,7 +210,7 @@ try{
 const news = await fetchJson(`${apilink}/sirasa`)
   
 const msg = `
-           ❖ *DARK NETHU MD SIRASA NEWS* ❖ 
+           ❖ *SAHAS MD SIRASA NEWS* ❖ 
 
        
 • *Title* - ${news.result.title}
@@ -219,7 +219,7 @@ const msg = `
 
 • *Link* - ${news.result.url}
 
-> ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`
 
 
 await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
@@ -246,7 +246,7 @@ try{
 const news = await fetchJson(`${apilink}/derana`)
   
 const msg = `
-           ❖ *DARK NETHU MD DERANA NEWS* ❖
+           ❖ *SAHAS MD DERANA NEWS* ❖
 
        
 • *Title* - ${news.result.title}
@@ -257,7 +257,7 @@ const msg = `
 
 • *Link* - ${news.result.url} 
 
-> ᴘᴀᴡᴇʀᴇᴅ ʙʏ ɴᴇᴛʜᴍɪᴋᴀ ᴍᴀɪɴ`
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`
 
 
 await conn.sendMessage( from, { image: { url: news.result.image || '' }, caption: msg }, { quoted: mek })
