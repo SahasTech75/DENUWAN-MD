@@ -150,7 +150,6 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
 const { fetchJson } = require('../lib/functions')
 const config = require('../config')
-const { cmd, commands } = require('../command')
 
 // FETCH API URL
 let baseUrl
