@@ -7,6 +7,7 @@ cmd({
     alias: ["updateenv"],
     desc: "Check and update environment variables",
     category: "owner",
+    react: "🔰",
     filename: __filename,
 },
 async (conn, mek, m, { from, q, reply, isOwner }) => {
