@@ -108,11 +108,6 @@ mek.message = (getContentType(mek.message) === 'ephemeralMessage') ? mek.message
 if (mek.key && mek.key.remoteJid === 'status@broadcast' && config.AUTO_READ_STATUS === "true"){
 await conn.readMessages([mek.key])
 }
-//=========autobio=======//
-if (config.AUTO_BIO === 'true'){
-               await
-conn.updateProfileStatus(`❖ 𝗦𝗔𝗛𝗔𝗦 𝗠𝗗 ❖ 𝗖𝗼𝗻𝗻𝗲𝗰𝘁𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝗳𝘂𝗹𝗹𝘆!`)
- }
 const m = sms(conn, mek)
 const type = getContentType(mek.message)
 const content = JSON.stringify(mek.message)
