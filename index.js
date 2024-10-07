@@ -190,6 +190,9 @@ m.react("👨‍💻")
 if (isCmd && config.AUTO_READ_CMD === "true") {
               await conn.readMessages([mek.key])  // Mark command as read
 }
+//Auto Typing
+if(config.AUTO_TYPING === 'true'){await conn.sendPresenceUpdate('composing', from);}
+        
 //Auto-StatusDL============== 
         
 //=====================✓
