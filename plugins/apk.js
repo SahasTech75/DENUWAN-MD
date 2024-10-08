@@ -19,11 +19,6 @@ cmd({
 async (conn, mek, m, { from, quoted, body, q, reply }) => {
     const appId = q.trim();
     if (!appId) return reply(`Please provide an app name`);
-
-reply(`*📚 Name :* ${app.name}
-📦 Developer : ${app.store.name}
-📥 Link : ${app.file.path}
-await conn.sendMessage(from, { image: { url: app.icon }, caption: listdata }, { quoted: mek }`);
     
     reply("_Downloading " + appId + "_");
     
@@ -37,7 +32,11 @@ await conn.sendMessage(from, { image: { url: app.icon }, caption: listdata }, { 
         
         await conn.sendMessage(
             from,
-            { document: buff, caption: `> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`, mimetype: "application/vnd.android.package-archive", filename: `${appInfo.appname}.apk` },
+            { document: buff, caption: `📚 Name :* ${app.name}
+📦 Developer : ${app.store.name}
+📥 Link : ${app.file.path}
+
+> *©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱᴀʜᴀꜱ ᴛᴇᴄʜ*`, mimetype: "application/vnd.android.package-archive", filename: `${appInfo.appname}.apk` },
             { quoted: mek }
         );
         
