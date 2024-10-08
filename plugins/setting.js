@@ -7,7 +7,9 @@ cmd({
     react: "⚙️",
     category: "owner"
 
-const config = await readEnv(..lib/mongodb);
+const config = await readEnv(../lib/mongodb);
+const config = await readEnv(../lib/mongodbenv);
+const config = await readEnv(../lib/database);
 
         let work;
         switch (config.MODE) {
