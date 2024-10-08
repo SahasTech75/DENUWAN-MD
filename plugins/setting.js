@@ -9,10 +9,7 @@ cmd({
     desc: "settings the bot",
     react: "⚙️",
     category: "owner"
-    
-}, 
-async (conn, mek, m, { from, isOwner, reply }) => {
-if (!isOwner) return reply("❌ You are not the owner!");
+
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
