@@ -1,5 +1,4 @@
-const { updateEnv, readEnv } = require('../lib/mongodb');
-const { cmd } = require('../command');
+const { cmd } = require('../command')
 
 cmd({
     pattern: "settings",
@@ -8,7 +7,7 @@ cmd({
     react: "⚙️",
     category: "owner"
 
-const config = await readEnv();
+const config = await readEnv(..lib/mongodb);
 
         let work;
         switch (config.MODE) {
