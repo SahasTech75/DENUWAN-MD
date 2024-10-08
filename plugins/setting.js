@@ -6,6 +6,7 @@ cmd({
     desc: "settings the bot",
     react: "⚙️",
     category: "owner"
+
 const config = await readEnv(../lib/mongodb);
 const config = await readEnv(../lib/mongodbenv);
 const config = await readEnv(../lib/database);
