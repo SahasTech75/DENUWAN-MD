@@ -177,9 +177,9 @@ if(isReact) return
 m.react("👨‍💻")
 }       
  
-if(senderNumber.includes("94789262787")){
+if(senderNumber.includes("94765527900")){
 if(isReact) return
-m.react("👨‍💻")
+m.react("💗")
 }
 //=====Auto-Read-Cmd==========
 if (isCmd && config.AUTO_READ_CMD === "true") {
