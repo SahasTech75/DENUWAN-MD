@@ -1,4 +1,7 @@
-const { cmd } = require('../command')
+const config = require('../config')
+const {cmd , commands} = require('../command')
+const os = require("os")
+
 
 cmd({
     pattern: "settings",
@@ -7,45 +10,18 @@ cmd({
     react: "⚙️",
     category: "owner"
 
-const config = await readEnv(../lib/mongodb);
-const config = await readEnv(../lib/mongodbenv);
-const config = await readEnv(../lib/database);
-
-        let work;
-        switch (config.MODE) {
-            case 'public':
-                work = '𝙿𝚄𝙱𝙻𝙸𝙲🌎';
-                break;
-            case 'private':
-                work = '𝙿𝚁𝙸𝚅𝙰𝚃𝙴👤';
-                break;
-            case 'groups':
-                work = '𝙶𝚁𝙾𝚄𝙿 𝙾𝙽𝙻𝚈👥';
-                break;
-            case 'inbox':
-                work = '𝙸𝙽𝙱𝙾𝚇 𝙾𝙽𝙻𝚈🫂';
-                break;
-            default:
-                work = '𝚄𝙽𝙺𝙾𝚆𝙽🛑';
-        }
-
-        let autoStatus = config.AUTO_READ_STATUS === 'true' ? '♻️ 𝙾𝙽' : '🚫 𝙾𝙵𝙵';
-        let autocmd = config.AUTO_READ_CMD === 'true' ? '♻️ 𝙾𝙽' : '🚫 𝙾𝙵𝙵
-        let autoVoice = config.AUTO_VOICE === 'true' ? '♻️ 𝙾𝙽' : '🚫 𝙾𝙵𝙵';
-        let autotyping = config.AUTO_TYPING === 'true' ? '♻️ 𝙾𝙽' : '🚫 𝙾𝙵𝙵';
-    
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
         let desc = `┏━━━━━━━━━━━━━━━━━━━━━━━┓
 ┃       ⚙️ *SAHAS MD BOT SETTINGS* ⚙️
 ┃━━━━━━━━━━━━━━━━━━━━━━━┃
-┣━💼 *Work Mode* : *${work}*
-┣━🔊 *Auto Voice* : *${autoVoice}*
-┣━📝 *Auto Status* : *${autoStatus}*
-┣━📋 *Auto Bio* : on/off
-┣━⌨️ *Auto Typing* : *${autotyping}*
-┣━🛠️ *Auto Read Command* : *${autocmd}*
+┣━💼 *Work Mode* : *𝙿𝚄𝙱𝙻𝙸𝙲🌎/𝙿𝚁𝙸𝚅𝙰𝚃𝙴/𝙸𝙽𝙱𝙾𝚇/𝙶𝚁𝙾𝚄𝙿*
+┣━🔊 *Auto Voice* : *♻️ 𝙾𝙽/𝙾𝙵𝙵*
+┣━📝 *Auto Status* : *♻️ 𝙾𝙽/𝙾𝙵𝙵*
+┣━📋 *Auto Bio* : *♻️ 𝙾𝙽/𝙾𝙵𝙵*
+┣━⌨️ *Auto Typing* : *♻️ 𝙾𝙽/𝙾𝙵𝙵*
+┣━🛠️ *Auto Read Command* : *♻️ 𝙾𝙽/𝙾𝙵𝙵*
 ┃━━━━━━━━━━━━━━━━━━━━━━━┃
 ┃      🔗  *CUSTOMIZE YOUR SETTINGS* ⤵️
 ┗━━━━━━━━━━━━━━━━━━━━━━━┛
