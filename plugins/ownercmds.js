@@ -149,3 +149,18 @@ async (conn, mek, m, { from, isOwner, reply }) => {
     const groupJids = Object.keys(groups).join('\n');
     reply(`📝 *Group JIDs:*\n\n${groupJids}`);
 });
+//-----------------------------------------------212 Number Block-----------------------------------------------
+
+cmd({
+    on: "body"
+},
+async (conn, mek, m, { from, body, isOwner }) => {
+    const config = await readEnv();
+    if (config.AUTO_BLock_212 === true) {
+        if (m.sender.startsWith('212')) {
+            await conn.updateBlockStatus(m.sender, 'block');
+            await conn.sendMessage(from, { text: `User ${m.sender} has been blocked.` }, { quoted: mek });
+            return;
+        }
+    }
+});
