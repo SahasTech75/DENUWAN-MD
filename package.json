@@ -41,7 +41,7 @@
     "youtubedl-core": "^4.11.5",
     "moment-timezone": "latest",
     "file_size_url": "^1.0.4",
-    "xnxx-dl": "^1.0.2",
+    "hirunews-scrap": "^1.1.2",
     "mongoose":"8.7.0"
 
   }
