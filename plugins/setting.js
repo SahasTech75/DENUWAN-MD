@@ -1,4 +1,4 @@
-const { updateEnv, readEnv } = require('../lib/database');
+const { updateEnv, readEnv } = require('../lib/mongodb');
 const { cmd } = require('../command');
 
 cmd({
