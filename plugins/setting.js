@@ -84,42 +84,52 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                           reply(".update MODE:group");
                         reply(".restart");
                       break;
-                    case '1.4'':                                    reply(".update MODE:inbox");
+                    case '1.4':     
+                        reply(".update MODE:inbox");
                         reply(".restart");
                       break;
-                    case '2.1'':                                    reply(".update AUTO_VOICE:true");
+                    case '2.1':     
+                        reply(".update AUTO_VOICE:true");
                         reply(".restart");
                         break;
-                    case '2.2'':                                    reply(".update AUTO_VOICE:false");
+                    case '2.2':     
+                        reply(".update AUTO_VOICE:false");
                         reply(".restart");
                     break;
-                    case '3.1'':                                    reply(".update AUTO_READ_STATUS:true");
+                    case '3.1':    
+                        reply(".update AUTO_READ_STATUS:true");
                         reply(".restart");
                     break;
-                    case '3.2'':                                    reply(".update AUTO_READ_STATUS:false");
+                    case '3.2':    
+                        reply(".update AUTO_READ_STATUS:false");
                         reply(".restart");
                     break;
-                    case '4.1'': 
+                    case '4.1': 
                     reply(".setautobio");
                     break;
-                    case '4.2'': 
+                    case '4.2': 
                     reply(".setautobio");
                     break;
-                    case '5.1'': 
+                    case '5.1': 
                     reply(".startnews");
                     break;
-                    case '5.2'': 
+                    case '5.2': 
                     reply(".stopnews");
                     break;
-                    case '6.1'':                                    reply(".update AUTO_TYPING:true");
+                    case '6.1':      
+                        reply(".update AUTO_TYPING:true");
                         reply(".restart");
                         break;
-                    case '6.2'':                                    reply(".update AUTO_TYPING:false");
-                    break;
-                    case '7.1'':                                    reply(".update AUTO_READ_CMD:true");
+                    case '6.2':   
+                        reply(".update AUTO_TYPING:false");
                         reply(".restart");
                     break;
-                    case '7.2'':                                    reply(".update AUTO_READ_CMD:false");
+                    case '7.1': 
+                        reply(".update AUTO_READ_CMD:true");
+                        reply(".restart");
+                    break;
+                    case '7.2':   
+                        reply(".update AUTO_READ_CMD:false");
                         reply(".restart");
                     
                         break;
