@@ -19,6 +19,11 @@ cmd({
 async (conn, mek, m, { from, quoted, body, q, reply }) => {
     const appId = q.trim();
     if (!appId) return reply(`Please provide an app name`);
+
+reply(`*📚 Name :* ${app.name}
+📦 Developer : ${app.store.name}
+📥 Link : ${app.file.path}
+await conn.sendMessage(from, { image: { url: app.icon }, caption: listdata }, { quoted: mek }`);
     
     reply("_Downloading " + appId + "_");
     
