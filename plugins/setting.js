@@ -106,10 +106,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                         reply(".restart");
                     break;
                     case '4.1': 
-                    reply(".setautobio");
+                    reply(".update AUTO_BIO:true");
+                    reply(".restart");
                     break;
                     case '4.2': 
-                    reply(".setautobio");
+                    reply(".update AUTO_BIO:false");
+                    reply(".restart");
                     break;
                     case '5.1': 
                     reply(".startnews");
